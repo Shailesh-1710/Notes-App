@@ -1,1 +1,25 @@
-{}
+{
+  "name": "notes_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start",
+    "backend": "cd server && npm run nodemon indes.js",
+    "start_app": "concurrently \"npm run backend\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shailesh-1710/Notes-App.git"
+  },
+  "author": "Shailesh Patel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shailesh-1710/Notes-App/issues"
+  },
+  "homepage": "https://github.com/Shailesh-1710/Notes-App#readme",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^7.2.1"
+  }
+}
