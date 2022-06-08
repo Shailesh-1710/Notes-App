@@ -1,6 +1,6 @@
 # PLEASE NOTE THAT THIS PROJECT IS UNDER DEVELOPMENT.
 
-<b>Last Update : 8th JUNE 2022</b>
+<b>Last Update : 8<sup>th</sup> JUNE 2022</b>
 
 ### Please install all required dependencies by executing folowing command.
 
