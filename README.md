@@ -6,15 +6,11 @@
 
 npm i
 
+<h1>Used Concurrenly to run front end and backend at same time<h1>
+
 ### Please start the project by running the following script
 
 npm run start_app
-
-### Please install all required dependencies by executing folowing command.
-
-npm i
-
-<h1>Used Concurrenly to run front end and backend at same time<h1>
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
