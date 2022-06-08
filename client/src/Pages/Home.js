@@ -20,7 +20,9 @@ export default function Home() {
       <div className="grid place-items-center pt-3 h-auto  rounded-2xl  ">
         <h1 className=".h1">Home Component</h1>
         {dataLoading && (
-          <h2 className="align-middle"> LOADING DATA PLEASE WAIT</h2>
+          <div className="grid content-center place-items-center ">
+            <h1 className=" text-xl text-center "> LOADING DATA PLEASE WAIT</h1>
+          </div>
         )}
         <div class="grid grid-cols-3 text-center ">
           {dataArray.map((element) => {
