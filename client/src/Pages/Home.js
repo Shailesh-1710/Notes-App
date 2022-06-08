@@ -9,7 +9,6 @@ export default function Home() {
     const fetcheddata = await axios.get("http://localhost:5000/");
     setDataArray(fetcheddata.data.documents);
     setDataLoading(false);
-    console.log(fetcheddata.data.documents);
   }
   useEffect(() => {
     getNotes();
@@ -18,13 +17,15 @@ export default function Home() {
   return (
     <div className="grid place-items-center ">
       <div className="grid place-items-center pt-3 h-auto  rounded-2xl  ">
-        <h1 className=".h1">Home Component</h1>
+        <h1 className=".h1 mt-12">Home Component</h1>
         {dataLoading && (
           <div className="grid content-center place-items-center ">
-            <h1 className=" text-xl text-center "> LOADING DATA PLEASE WAIT</h1>
+            <h1 className=" text-xl text-center mt-36 ">
+              Fetching Data From Database Please Wait...
+            </h1>
           </div>
         )}
-        <div class="grid grid-cols-3 text-center ">
+        <div class="grid grid-cols-3 text-center mt-12 ">
           {dataArray.map((element) => {
             return (
               <div class="flex m-3 h-auto" key={element.Uuid}>
