@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import NotFound from "./Pages/NotFound";
+import AddNewNote from "./Pages/AddNewNote";
 import Navbar from "./Pages/Navbar";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/new" element={<AddNewNote />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<NotFound />} />
