@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const axios = require("axios");
 
 export default function Home() {
@@ -6,7 +8,15 @@ export default function Home() {
   const [dataLoading, setDataLoading] = useState(true);
 
   async function getNotes() {
-    const fetcheddata = await axios.get("http://localhost:5000/");
+    const fetcheddata = await toast.promise(
+      axios.get("http://localhost:5000/"),
+      {
+        pending: "Fetching Data",
+        success: "Promise resolved 👌",
+        error: "Promise rejected 🤯",
+      }
+    );
+    //const fetcheddata = await axios.get("http://localhost:5000/");
     setDataArray(fetcheddata.data.documents);
     setDataLoading(false);
   }
@@ -16,6 +26,7 @@ export default function Home() {
 
   return (
     <div className="grid place-items-center ">
+      <ToastContainer />
       <div className="grid place-items-center pt-3 h-auto  rounded-2xl  ">
         <h1 className=".h1 mt-12">Home Component</h1>
         {dataLoading && (
